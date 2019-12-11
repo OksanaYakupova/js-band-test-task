@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech task</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8143890db4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="section-style">
+    TODOList
+</header>
+
+<div class="create-task js-create-task">
+    <form method="post" action="" enctype="text/plain" class="js-create-task-form">
+        <label for="title" class="form-label">
+            Title:
+        </label>
+        <br>
+        <input required type="text" id="title" placeholder="Title" name="title" class="form-input js-create-task-title">
+        <br>
+        <label for="description" class="form-label">
+            Description:
+        </label>
+        <br>
+        <input type="text" id="description" placeholder="Description" name="description"
+               class="form-input form-input-description js-create-task-description">
+        <br>
+        <label for="priority-list" class="form-label">
+            Priority
+        </label>
+        <br>
+        <div class="select form-select">
+            <select name="priority-list" id="priority-list"
+                    class="select-area form-select-area js-create-task-priority">
+                <option selected value="high">High</option>
+                <option value="normal">Normal</option>
+                <option value="low">Low</option>
+            </select>
+        </div>
+        <div class="form-button">
+            <button type="reset" class="button-area js-create-task-cancel">Cancel</button>
+            <button type="submit" class="button-area">Save</button>
+        </div>
+    </form>
+</div>
+
+<main>
+    <div class="overlay js-main-overlay"></div>
+    <section class="nav-section">
+        <div class="search">
+            <i class="fas fa-search search-icons"></i>
+            <input type="search" placeholder="search by title" title="search by title" name="search"
+                   class="search-input js-search-input">
+        </div>
+        <div class="select">
+            <select name="status" id="status" class="select-area js-card-status-filter">
+                <option selected>all</option>
+                <option value="open">open</option>
+                <option value="done">done</option>
+            </select>
+        </div>
+        <div class="select">
+            <select name="priority" id="priority" class="select-area js-card-status-priority-filter">
+                <option selected>all</option>
+                <option value="high">high</option>
+                <option value="normal">normal</option>
+                <option value="low">low</option>
+            </select>
+        </div>
+        <button type="submit" class="button-area" value="Click" onmousedown="openCreateTaskForm()">Create</button>
+    </section>
+
+    <section class="card-section js-task-list">
+    </section>
+</main>
+<footer class="section-style">
+    Oksana Yakupova
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

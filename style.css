@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.section-style {
+    font-weight: bold;
+    height: 20px;
+}
+
+header {
+    padding: 20px 10px;
+    border-bottom: 1px solid;
+}
+
+main {
+    min-height: calc(100vh - 80px - 60px - 40px - 2px);
+    /* 80px - header, 60px - footer, 40px - main margin, 2px - header&footer borders */
+    margin: 20px 50px 20px 100px;
+    position: relative;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: -100px;
+    height: calc(100% + 40px);
+    width: calc(100% + 150px);
+    z-index: 10;
+    background-color: rgba(225, 225, 225, .7);
+}
+
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.search-icons {
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.search-input {
+    box-sizing: content-box;
+    width: 300px;
+    height: 30px;
+    border-style: solid;
+    font-size: 1em;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-width: 2px;
+    padding: 0 0 0 100px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+}
+
+.select:after {
+    content: "▼";
+    font-size: 20px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    z-index: 1;
+    text-align: center;
+    height: 26px;
+    width: 29px;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 2px solid;
+}
+
+.select-area {
+    padding: 0 0 0 20px;
+    box-sizing: content-box;
+    width: 150px;
+    height: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 1em;
+    background-color: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+.select-area:focus {
+    outline: none;
+}
+
+.button-area {
+    width: 100px;
+    height: 30px;
+    border: 2px solid;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: content-box;
+    font-size: 1em;
+}
+
+.button-area:focus {
+    outline: none;
+}
+
+.create-task {
+    display: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+}
+
+form {
+    box-sizing: border-box;
+    background-color: white;
+    margin: 40px auto;
+    width: 20%;
+    min-height: 60%;
+    border: 2px solid;
+    padding: 15px;
+    font-size: 1em;
+}
+
+.form-label {
+    margin-left: 5px;
+}
+
+.form-input {
+    margin: 5px 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    border-style: solid;
+    font-size: 1em;
+    border-width: 2px;
+    padding-left: 5px;
+}
+
+.form-input-description {
+    height: 70px;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.form-select {
+    width: 100%;
+}
+
+.form-select-area {
+    width: 96%;
+    margin: 5px 0;
+    padding-left: 5px;
+}
+
+.form-select:after {
+    top: 9px;
+}
+
+.form-button {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.task-card {
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-right: 40px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    padding: 20px 10px;
+}
+
+
+.card-title {
+    height: 100px;
+}
+
+.card-description {
+    height: 100px;
+}
+
+.card-settings {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-priority {
+    box-sizing: border-box;
+    border: 2px dashed;
+    width: 90px;
+    border-radius: 6px;
+    text-align: center;
+    height: 30px;
+    padding-top: 4px;
+}
+
+.card-status-select {
+    position: relative;
+    display: inline-block;
+}
+
+.card-select-area {
+    width: 30px;
+    height: 30px;
+    border-color: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+
+.card-status-select:after {
+    content: "...";
+    font-size: 1em;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 8px;
+    padding-top: 3px;
+}
+
+.card-select-area:focus {
+    outline: none;
+}
+
+.done-card {
+    background-color: rgba(225, 225, 225, .7);
+    background-image: url("./img/done.gif");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
+
+.card-status-done {
+    background-color: rgba(225, 225, 225, .7);
+}
+
+footer {
+    border-top: 1px solid;
+    padding: 30px 10px;
+}
